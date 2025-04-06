@@ -13,6 +13,7 @@ return {
                 position = "left",
                 width = 26,
             },
+            close_if_last_window = true,
         })
     end,
 }
