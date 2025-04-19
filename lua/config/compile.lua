@@ -15,7 +15,7 @@ vim.api.nvim_create_autocmd("FileType", {
             vim.cmd(":w") -- 儲存檔案
             -- 打開終端並進入插入模式
             vim.cmd(
-                "belowright split | resize 10 | term g++ % -o %:r.out -g -DDEBUG -DAaW -I/usr/local/include -std=c++17 -Wall && echo -----compiled----- && ./%:r.out"
+                "belowright split | resize 20 | term g++ % -o %:r.out -DDEBUG -DAaW -I/usr/local/include -std=c++17 -Wall && echo -----compiled----- && ./%:r.out"
             )
             vim.cmd("startinsert") -- 進入插入模式
         end)
@@ -28,7 +28,7 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.keymap.set("n", "<F5>", function()
             vim.cmd(":w") -- 儲存檔案
             vim.cmd(
-                "belowright split | resize 10 | term gcc % -o %:r.out -g -DDEBUG -DAaW -I/usr/local/include -Wall && echo -----compiled----- && ./%:r.out"
+                "belowright split | resize 20 | term gcc % -o %:r.out -DDEBUG -DAaW -I/usr/local/include -Wall && echo -----compiled----- && ./%:r.out"
             )
             vim.cmd("startinsert") -- 進入插入模式
         end)
@@ -40,7 +40,7 @@ vim.api.nvim_create_autocmd("FileType", {
     callback = function()
         vim.keymap.set("n", "<F5>", function()
             vim.cmd(":w") -- 儲存檔案
-            vim.cmd("belowright split | resize 10 | term python %")
+            vim.cmd("belowright split | resize 20 | term python %")
             vim.cmd("startinsert") -- 進入插入模式
         end)
     end,
