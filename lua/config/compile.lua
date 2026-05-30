@@ -45,3 +45,14 @@ vim.api.nvim_create_autocmd("FileType", {
         end)
     end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "typst",
+    callback = function()
+        vim.keymap.set("n", "<F5>", function()
+            vim.cmd(":w")
+            vim.cmd("term typst compile %")
+            vim.cmd("startinsert")
+        end)
+    end,
+})

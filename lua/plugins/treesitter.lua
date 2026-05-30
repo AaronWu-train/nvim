@@ -4,7 +4,7 @@ return {
     config = function()
         local config = require("nvim-treesitter.configs")
         config.setup({
-            ensure_installed = { "lua", "cpp", "python", "verilog" },
+            ensure_installed = { "lua", "cpp", "python", "verilog", "typst" },
             highlight = { enable = true },
             indent = { enable = true }, -- auto indent after brackets
         })
